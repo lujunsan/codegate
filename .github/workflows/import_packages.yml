@@ -52,9 +52,9 @@ jobs:
         mkdir -p /tmp/jsonl-files
         
         # Download and map the S3 files to fixed names in /tmp/jsonl-files
-        aws s3 cp s3://codegate-data-staging/$MALICIOUS_KEY /tmp/jsonl-files/malicious.jsonl --region $AWS_REGION
-        aws s3 cp s3://codegate-data-staging/$DEPRECATED_KEY /tmp/jsonl-files/deprecated.jsonl --region $AWS_REGION
-        aws s3 cp s3://codegate-data-staging/$ARCHIVED_KEY /tmp/jsonl-files/archived.jsonl --region $AWS_REGION
+        aws s3 cp s3://codegate-data-prod/$MALICIOUS_KEY /tmp/jsonl-files/malicious.jsonl --region $AWS_REGION
+        aws s3 cp s3://codegate-data-prod/$DEPRECATED_KEY /tmp/jsonl-files/deprecated.jsonl --region $AWS_REGION
+        aws s3 cp s3://codegate-data-prod/$ARCHIVED_KEY /tmp/jsonl-files/archived.jsonl --region $AWS_REGION
 
     - name: Install Poetry
       run: |
